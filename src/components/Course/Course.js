@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Course = (props) => {
     const { name, category, price, enroll, image } = props.course;
-    console.log(props.course);
     return (
 
 
@@ -19,7 +18,7 @@ const Course = (props) => {
                         <p>Course Enroll: {enroll} Students</p>
                         <b>Price: {price}</b>
                     </Card.Text>
-                    <Button variant="primary">Course Details</Button>
+                    <Button onClick={() => props.handleAddtoProduct(props.course)} className="btn-regular">Add to Cart</Button>
                 </Card.Body>
             </Card>
         </Col>
